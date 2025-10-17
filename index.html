@@ -2,42 +2,167 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mayuresh More | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>👋 Hi, I'm Mayuresh More</h1>
-  <p>Computer Vision & Robotics Engineer | ROS2 | YOLOv8</p>
-</header>
+<nav class="topnav">
+  <div class="nav-brand">Mayuresh More</div>
+  <ul class="nav-tabs" role="tablist">
+    <li><button class="tab active" data-tab="home">Home</button></li>
+    <li><button class="tab" data-tab="projects">Projects</button></li>
+    <li><button class="tab" data-tab="skills">Skills</button></li>
+    <li><button class="tab" data-tab="experience">Experience</button></li>
+    <li><button class="tab" data-tab="contact">Contact</button></li>
+  </ul>
+</nav>
 
-<!-- Project 1 -->
-<div class="project">
-  <h2>🚁 YOLOv8 Person Detection with Drone</h2>
-  <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Drone Demo" allowfullscreen></iframe>
-  <p>Drone detects and tracks a person using YOLOv8 and ROS2 integration.</p>
-  <p><a href="https://huggingface.co/mayureshmore/yolov8n-best">Download model weights</a></p>
-</div>
+<main class="container">
 
-<!-- Project 2 -->
-<div class="project">
-  <h2>📊 ROI Timer for Vehicle Detection</h2>
-  <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID" title="ROI Timer Demo" allowfullscreen></iframe>
-  <p>Tracks vehicles in a region of interest and measures duration of presence.</p>
-</div>
+  <!-- Home / Hero -->
+  <section id="home" class="panel">
+    <header class="hero">
+      <h1>👋 Hi, I’m <span class="accent">Mayuresh More</span></h1>
+      <p class="lead">AI & Robotics Engineer specializing in Computer Vision, ROS2, and Drone Systems.</p>
+      <p class="meta">Python • OpenCV • PyTorch • ROS2 • YOLOv8 • NVIDIA Jetson</p>
+      <div class="cta">
+        <a class="btn" data-target="projects">View Projects</a>
+        <a class="btn ghost" href="https://github.com/Mayuresh-AI-Engineer" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </header>
+  </section>
 
-<!-- Project 3 Example with Image -->
-<div class="project">
-  <h2>🤖 MediaPipe Pose Estimation</h2>
-  <img src="assets/images/placeholder.png" alt="MediaPipe Demo">
-  <p>Detects human poses and draws skeletal lines on video feed.</p>
-</div>
+  <!-- Projects -->
+  <section id="projects" class="panel hidden">
+    <h2>📁 Projects</h2>
 
-<footer>
-  <p>© 2025 Mayuresh More | <a href="mailto:mayureshmore54@gmail.com">Email Me</a> | <a href="https://github.com/Mayuresh-AI-Engineer">GitHub</a></p>
-</footer>
+    <div class="project">
+      <h3>🚁 YOLOv8 Drone Demo (Car/Person Detection + ROI)</h3>
+      <div class="media">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Drone Demo" allowfullscreen></iframe>
+      </div>
+      <p>Drone detects and tracks objects using YOLOv8 integrated with ROS2. <a href="https://huggingface.co/mayureshmore/yolov8n-best">Model weights</a></p>
+    </div>
+
+    <div class="project">
+      <h3>📊 ROI Timer for Vehicle Detection</h3>
+      <div class="media">
+        <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID" title="ROI Timer Demo" allowfullscreen></iframe>
+      </div>
+      <p>Tracks vehicles in a region of interest and measures presence duration for analytics.</p>
+    </div>
+
+    <div class="project">
+      <h3>🤖 MediaPipe Pose Estimation</h3>
+      <div class="media">
+        <img src="assets/images/placeholder.png" alt="MediaPipe Demo">
+      </div>
+      <p>Real-time human pose estimation with skeletal overlays and angle measurements.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="panel hidden">
+    <h2>🧠 Skills & Tech Stack</h2>
+    <p>Focused on perception, embedded systems, and autonomous platforms.</p>
+    <ul class="skills-grid">
+      <li>Python</li>
+      <li>OpenCV</li>
+      <li>PyTorch</li>
+      <li>ROS2</li>
+      <li>ArduPilot</li>
+      <li>Gazebo</li>
+      <li>YOLOv8</li>
+      <li>DeepStream</li>
+      <li>NVIDIA Jetson</li>
+      <li>Docker</li>
+    </ul>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="panel hidden">
+    <h2>📄 Experience</h2>
+    <div class="experience-card">
+      <h3>Witsense AI — Intern</h3>
+      <p class="muted">Drone Vision with ROS2 | Internship</p>
+      <ul>
+        <li>Implemented perception pipelines using YOLO, OpenCV and ROS2 nodes.</li>
+        <li>Integrated real-time detection with drone navigation and data logging.</li>
+        <li>Optimized inference for embedded platforms (Jetson, DeepStream).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="panel hidden">
+    <h2>✉️ Contact</h2>
+    <p>Prefer email? Use the form or click the direct links below.</p>
+
+    <form id="contactForm" class="contact-form">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Send</button>
+      <p class="small muted">This will open your email client — no server required.</p>
+    </form>
+
+    <div class="contact-links">
+      <p>Email: <a href="mailto:mayureshmore54@gmail.com">mayureshmore54@gmail.com</a></p>
+      <p>LinkedIn: <a href="#" target="_blank" rel="noopener">Your LinkedIn</a></p>
+      <p>GitHub: <a href="https://github.com/Mayuresh-AI-Engineer" target="_blank" rel="noopener">Mayuresh-AI-Engineer</a></p>
+      <p>Resume: <a href="resume.pdf" target="_blank">Download (PDF)</a></p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 Mayuresh More — <a href="mailto:mayureshmore54@gmail.com">mayureshmore54@gmail.com</a> • <a href="https://github.com/Mayuresh-AI-Engineer">GitHub</a></p>
+  </footer>
+
+</main>
+
+<script>
+// Tab switching
+document.querySelectorAll('.tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    const target = btn.getAttribute('data-tab');
+    document.querySelectorAll('.panel').forEach(p => p.classList.add('hidden'));
+    const el = document.getElementById(target);
+    if (el) el.classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+// CTAs that link to tabs
+document.querySelectorAll('[data-target]').forEach(el => {
+  el.addEventListener('click', (e) => {
+    const t = el.getAttribute('data-target');
+    const btn = document.querySelector('.tab[data-tab="' + t + '"]');
+    if (btn) btn.click();
+  });
+});
+
+// Contact form: open mailto with prefilled content
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const name = encodeURIComponent(document.getElementById('name').value.trim());
+  const email = encodeURIComponent(document.getElementById('email').value.trim());
+  const message = encodeURIComponent(document.getElementById('message').value.trim());
+  const subject = encodeURIComponent('Portfolio contact from ' + name);
+  const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+  window.location.href = `mailto:mayureshmore54@gmail.com?subject=${subject}&body=${body}`;
+});
+</script>
 
 </body>
 </html>
