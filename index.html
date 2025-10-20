@@ -82,24 +82,78 @@
     </ul>
   </section>
 
-  <!-- Experience -->
+  <!-- Experience / Resume -->
   <section id="experience" class="panel hidden">
-    <h2>📄 Experience</h2>
-    <div class="experience-card">
-      <h3>Witsense AI — Intern</h3>
-      <p class="muted">Drone Vision with ROS2 | Internship</p>
-      <ul>
-        <li>Implemented perception pipelines using YOLO, OpenCV and ROS2 nodes.</li>
-        <li>Integrated real-time detection with drone navigation and data logging.</li>
-        <li>Optimized inference for embedded platforms (Jetson, DeepStream).</li>
-      </ul>
+    <h2>📄 Experience & Resume</h2>
+    <div class="resume">
+      <div class="resume-actions">
+        <a href="resume.md" class="btn" target="_blank" rel="noopener">View Resume</a>
+        <a href="resume.md" download class="btn ghost">Download</a>
+      </div>
+
+      <div class="resume-section">
+        <h3>PROFILE SUMMARY</h3>
+        <p>AI & Robotics Engineer specializing in computer vision, SLAM, and autonomous navigation with ROS 2 and YOLO pipelines. Proven track record deploying production ML systems using FastAPI, AWS MLOps, and edge optimization (Raspberry Pi, Coral USB). Hands-on experience with UAV systems (ArduPilot SITL) and high-fidelity simulations (Gazebo, Isaac Sim, Mujoco) to deliver real-world autonomous solutions.</p>
+      </div>
+
+      <div class="resume-section two-col">
+        <div>
+          <h4>EDUCATION</h4>
+          <p><strong>University of Mumbai</strong> — Bachelor of Engineering, Computer Science<br>12th July 2023 • GPA: 8.04/10</p>
+
+          <h4>WORK EXPERIENCE</h4>
+          <p><strong>Witsense AI — AI Engineer (Remote)</strong><br><em>March 2024 - September 2025</em></p>
+          <ul>
+            <li>Engineered an end-to-end auto-annotation system using GroundingDINO + Grounded-SAM, generating production-ready YOLO datasets with integrated YOLOv8/YOLO11 pipelines and downloadable PyTorch weights.</li>
+            <li>Architected serverless MLOps infrastructure (AWS SQS, Lambda, Batch, S3) and built FastAPI + PostgreSQL REST APIs for image uploads, automated annotation workflows, and GPU training pipelines — reducing deployment latency by 40%.</li>
+            <li>Trained custom YOLOv8/YOLO11 detectors (door handles, top-view people, uncommon objects), achieving 99.5 mAP@50 through optimized dataset annotation and fine-tuning.</li>
+            <li>Optimized models for edge devices (Raspberry Pi 5, Coral USB) — reducing size by 80% and achieving 5× faster inference.</li>
+            <li>Developed a ROS 2-based Search & Rescue UAV integrating Gazebo/ArduPilot SITL, Cartographer SLAM, and a custom Ground Control Station with telemetry + CV pipelines.</li>
+            <li>Built a high-performance upscaling pipeline with Real-ESRGAN + FSRCNN, improving PSNR by 25% over traditional methods.</li>
+            <li>Led daily stand-ups as Scrum Master and mentored 2 junior engineers through feature development and delivery.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>TECHNICAL SKILLS</h4>
+          <ul>
+            <li>Programming & Backend: Python, FastAPI, PostgreSQL</li>
+            <li>Computer Vision: OpenCV, NVIDIA DeepStream, YOLOv8/YOLO11, Object Detection/Tracking, Quantization, Super-Resolution</li>
+            <li>Cloud & MLOps: AWS (S3, SQS, Lambda, Batch, ECR), Docker, Git</li>
+            <li>Robotics & UAVs: ROS 2, Gazebo, ArduPilot SITL, Nav2, Cartographer SLAM, Isaac Sim, Mujoco, MAVLink</li>
+            <li>ML Frameworks: PyTorch, Hugging Face, Reinforcement Learning</li>
+            <li>Tools & Hardware: VS Code, Rviz2, RunPod, Raspberry Pi 5, Coral USB</li>
+          </ul>
+
+          <h4>CERTIFICATIONS & AWARDS</h4>
+          <ul>
+            <li>LeRobot Hackathon (Hugging Face) — LeRobot Worldwide Hackathon 2025</li>
+            <li>NVIDIA — Getting Started: Simulating Your First Robot in Isaac Sim</li>
+            <li>DeepLearning.AI — Agentic Knowledge Graph Construction</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h4>PERSONAL PROJECTS</h4>
+        <ul>
+          <li><strong>Auto-rickshaw detector</strong>: YOLOv8-based detector trained on a custom annotated dataset. <a href="https://github.com/MayureshM0re/Yolov-8-auto-rickshaw-detection" target="_blank" rel="noopener">Repo</a></li>
+          <li><strong>QR Code detector</strong>: Dataset generator and YOLOv11-based detector for robust QR detection.</li>
+          <li><strong>3D Model Construction</strong>: Trained custom models and evaluated pre-trained models using PyTorch3D for 3D generation.</li>
+        </ul>
+      </div>
+
+      <div class="resume-section">
+        <h4>LEARNING & DEVELOPMENT</h4>
+        <p>Expanding knowledge in TensorFlow and OpenVINO; building expertise in custom Nav2 planner and controller development (C++).</p>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="panel hidden">
     <h2>✉️ Contact</h2>
-    <p>Prefer email? Use the form or click the direct links below.</p>
+    <p>Prefer email or direct message? Use the form below or the quick links.</p>
 
     <form id="contactForm" class="contact-form">
       <label for="name">Name</label>
@@ -115,11 +169,39 @@
       <p class="small muted">This will open your email client — no server required.</p>
     </form>
 
-    <div class="contact-links">
-      <p>Email: <a href="mailto:mayureshmore54@gmail.com">mayureshmore54@gmail.com</a></p>
-      <p>LinkedIn: <a href="#" target="_blank" rel="noopener">Your LinkedIn</a></p>
-      <p>GitHub: <a href="https://github.com/Mayuresh-AI-Engineer" target="_blank" rel="noopener">Mayuresh-AI-Engineer</a></p>
-      <p>Resume: <a href="resume.pdf" target="_blank">Download (PDF)</a></p>
+    <div class="contact-list">
+      <div class="contact-item">
+        <strong>Email</strong>
+        <div>
+          <a href="mailto:mayureshmore54@gmail.com">mayureshmore54@gmail.com</a>
+          <button class="copy-btn" data-copy="mayureshmore54@gmail.com">Copy</button>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <strong>Phone</strong>
+        <div>
+          <a href="tel:+COUNTRY_PHONE">+COUNTRY_PHONE</a>
+          <button class="copy-btn" data-copy="+COUNTRY_PHONE">Copy</button>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <strong>LinkedIn</strong>
+        <div>
+          <a id="linkedinLink" href="#" target="_blank" rel="noopener">Your LinkedIn</a>
+          <button class="copy-btn" data-copy="https://www.linkedin.com/in/YOUR_PROFILE">Copy</button>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <strong>GitHub</strong>
+        <div>
+          <a href="https://github.com/Mayuresh-AI-Engineer" target="_blank" rel="noopener">Mayuresh-AI-Engineer</a>
+          <button class="copy-btn" data-copy="https://github.com/Mayuresh-AI-Engineer">Copy</button>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -152,16 +234,33 @@ document.querySelectorAll('[data-target]').forEach(el => {
   });
 });
 
+</script>
+
+<script>
 // Contact form: open mailto with prefilled content
 document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
-  const name = encodeURIComponent(document.getElementById('name').value.trim());
-  const email = encodeURIComponent(document.getElementById('email').value.trim());
-  const message = encodeURIComponent(document.getElementById('message').value.trim());
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
   const subject = encodeURIComponent('Portfolio contact from ' + name);
   const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
   window.location.href = `mailto:mayureshmore54@gmail.com?subject=${subject}&body=${body}`;
 });
+
+// Copy buttons for contact items
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const txt = btn.getAttribute('data-copy');
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(txt).then(() => {
+        btn.textContent = 'Copied';
+        setTimeout(() => btn.textContent = 'Copy', 1500);
+      });
+    }
+  });
+});
+</script>
 </script>
 
 </body>
