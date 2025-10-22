@@ -35,6 +35,16 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Copy resume into dist (if present)
+        run: |
+          if [ -f "Mayuresh More Resume.pdf" ]; then
+            echo "Found Mayuresh More Resume.pdf — copying to dist/"
+            cp "Mayuresh More Resume.pdf" dist/
+            ls -la dist | sed -n '1,200p'
+          else
+            echo "No Mayuresh More Resume.pdf found in repo root — skipping"
+          fi
+
       - name: Debug git remote
         run: |
           git --no-pager remote -v
