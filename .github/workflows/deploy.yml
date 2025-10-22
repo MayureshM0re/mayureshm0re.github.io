@@ -6,7 +6,9 @@ on:
       - main
 
 permissions:
-  contents: read
+  # Grant write permission so the action can create and push the gh-pages commit.
+  # Without contents: write the runner will get a 403 when trying to push.
+  contents: write
   pages: write
   id-token: write
 
@@ -17,6 +19,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # persist-credentials allows subsequent steps to push using the provided token
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -28,6 +34,12 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Debug git remote
+        run: |
+          git --no-pager remote -v
+          git config --get user.name || true
+          git config --get user.email || true
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
