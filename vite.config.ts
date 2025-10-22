@@ -1,10 +1,12 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
+// IMPORTANT: set `base` to your repository name when deploying to GitHub Pages
+// Replace the string below with your repo path if it differs
 export default defineConfig({
+  base: '/Mayuresh-AI-Engineer.github.io/',
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-});
+})
