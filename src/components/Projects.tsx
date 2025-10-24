@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
+import edgeDetectionImg from '../assets/edge-detection.svg';
+import humanPoseImg from '../assets/human-pose.svg';
 
 interface Project {
   id: number;
@@ -19,17 +21,17 @@ export default function Projects() {
       id: 1,
       title: 'Vehicle Detection & ROI Timer Analysis',
       description: 'End-to-end vehicle detection and tracking system with ROI-based wait-time measurement. Built using YOLOv11n and BoT-SORT tracker, the system records how long each vehicle stays inside a defined polygonal ROI and outputs annotated video with analytics.',
-      tags: ['YOLO11n', 'BoT-SORT', 'OpenCV', 'Python', 'Docker'],
-      thumbnail: 'https://images.pexels.com/photos/2876511/pexels-photo-2876511.jpeg?auto=compress&cs=tinysrgb&w=800',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      tags: ['YOLO11', 'BoT-SORT', 'OpenCV', 'Python', 'Docker'],
+      thumbnail: 'https://images.pexels.com/photos/34350298/pexels-photo-34350298.jpeg?auto=compress&cs=tinysrgb&w=800',
+      videoUrl: 'https://www.youtube.com/embed/lw7VPc6RysA',
       demoType: 'youtube',
     },
     {
       id: 2,
-      title: 'ROS2 Multi-Robot Coordination',
-      description: 'Distributed multi-robot system using ROS2 for coordinated task execution with real-time communication and path planning algorithms.',
-      tags: ['ROS2', 'Python', 'Robotics'],
-      thumbnail: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Human Pose Estimation Keypoints & Detection',
+      description: 'Real-time human pose estimation and keypoint detection using deep learning Human Pose models.',
+      tags: ['Human Pose Estimation', 'Keypoints', 'Python', 'OpenCV'],
+      thumbnail: humanPoseImg,
       videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
       demoType: 'youtube',
     },
@@ -38,8 +40,8 @@ export default function Projects() {
       title: 'Real-Time Person Detection & Tracking',
       description: 'High-performance person detection and tracking system using YOLOv8 with DeepSORT, achieving 60+ FPS on edge devices.',
       tags: ['YOLOv8', 'OpenCV', 'Deep Learning'],
-      thumbnail: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      thumbnail: edgeDetectionImg,
+      videoUrl: 'https://youtu.be/lw7VPc6RysA?si=67yqxIOEc4kHM5tH',
       demoType: 'youtube',
     },
     {
