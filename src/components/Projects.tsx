@@ -32,16 +32,16 @@ export default function Projects() {
       description: 'Real-time human pose estimation and keypoint detection using deep learning Human Pose models.',
       tags: ['Human Pose Estimation', 'Keypoints', 'Python', 'OpenCV'],
       thumbnail: poseImg,
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      videoUrl: 'https://www.youtube.com/embed/6dOQi_NEuec',
       demoType: 'youtube',
     },
     {
       id: 3,
-      title: 'Real-Time Person Detection & Tracking',
-      description: 'High-performance person detection and tracking system using YOLOv8 with DeepSORT, achieving 60+ FPS on edge devices.',
-      tags: ['YOLOv8', 'OpenCV', 'Deep Learning'],
+      title: 'Edge Detection- OpenCV',
+      description: 'Edge detection using OpenCV and deep learning techniques.',
+      tags: ['Canny Edge', 'Sobel Operator', 'Laplacian Operator', 'Scharr Operator', 'OpenCV'],
       thumbnail: edgeImg,
-      videoUrl: 'https://youtu.be/lw7VPc6RysA?si=67yqxIOEc4kHM5tH',
+      videoUrl: 'https://www.youtube.com/embed/6dOQi_NEuec',
       demoType: 'youtube',
     },
     {
@@ -50,7 +50,7 @@ export default function Projects() {
       description: 'Optimized computer vision pipeline for NVIDIA Jetson with TensorRT acceleration, enabling real-time inference for industrial applications.',
       tags: ['Jetson', 'TensorRT', 'OpenCV'],
       thumbnail: 'https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=800',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      videoUrl: 'https://www.youtube.com/embed/6dOQi_NEuec',
       demoType: 'youtube',
     },
     {
@@ -59,7 +59,7 @@ export default function Projects() {
       description: 'Deep learning model for real-time hand gesture recognition using CNNs, deployed on edge devices for human-robot interaction.',
       tags: ['Deep Learning', 'Python', 'OpenCV'],
       thumbnail: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      videoUrl: 'https://www.youtube.com/embed/6dOQi_NEuec',
       demoType: 'youtube',
     },
     {
@@ -68,7 +68,7 @@ export default function Projects() {
       description: 'Precision agriculture solution using computer vision and multispectral imaging for crop health monitoring and yield prediction.',
       tags: ['Drone', 'YOLOv8', 'ArduPilot'],
       thumbnail: 'https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=800',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      videoUrl: 'https://www.youtube.com/embed/6dOQi_NEuec',
       demoType: 'youtube',
     },
   ];

@@ -112,7 +112,7 @@ export default function Hero() {
 
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
             <span className="bg-gradient-to-r from-cyan-400 via-green-400 to-cyan-400 bg-clip-text text-transparent">
-              AI Engineer | Robotics | Computer Vision
+              AI Engineer | Computer Vision | Robotics
             </span>
           </h2>
 

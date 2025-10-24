@@ -227,7 +227,7 @@ export default function Contact() {
 
       <footer className="mt-20 pt-8 border-t border-gray-800">
         <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
-          <p>© 2025 Mayuresh More | Built with React, TypeScript & Tailwind CSS</p>
+          <p>© 2025 Mayuresh More | Built with ❤️</p>
         </div>
       </footer>
     </section>
