@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
-import edgeDetectionImg from '../assets/edge-detection.svg';
-import humanPoseImg from '../assets/human-pose.svg';
+import edgeImg from '../assets/edge-detection.jpg';
+import poseImg from '../assets/human-pose.png';
 
 interface Project {
   id: number;
@@ -31,7 +31,7 @@ export default function Projects() {
       title: 'Human Pose Estimation Keypoints & Detection',
       description: 'Real-time human pose estimation and keypoint detection using deep learning Human Pose models.',
       tags: ['Human Pose Estimation', 'Keypoints', 'Python', 'OpenCV'],
-      thumbnail: humanPoseImg,
+      thumbnail: poseImg,
       videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
       demoType: 'youtube',
     },
@@ -40,7 +40,7 @@ export default function Projects() {
       title: 'Real-Time Person Detection & Tracking',
       description: 'High-performance person detection and tracking system using YOLOv8 with DeepSORT, achieving 60+ FPS on edge devices.',
       tags: ['YOLOv8', 'OpenCV', 'Deep Learning'],
-      thumbnail: edgeDetectionImg,
+      thumbnail: edgeImg,
       videoUrl: 'https://youtu.be/lw7VPc6RysA?si=67yqxIOEc4kHM5tH',
       demoType: 'youtube',
     },
