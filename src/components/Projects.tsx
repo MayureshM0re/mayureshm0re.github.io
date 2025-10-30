@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Play, X } from 'lucide-react';
 import edgeImg from '../assets/edge-detection.jpg';
 import poseImg from '../assets/human-pose.png';
+import figureImg from '../assets/Figure_1.png';
 
 interface Project {
   id: number;
@@ -9,8 +10,12 @@ interface Project {
   description: string;
   tags: string[];
   thumbnail: string;
-  videoUrl: string;
-  demoType: 'youtube' | 'vimeo' | 'cloudinary';
+  // either a video or an image preview can be shown in the modal
+  videoUrl?: string;
+  demoType?: 'youtube' | 'vimeo' | 'cloudinary';
+  mediaType?: 'video' | 'image';
+  // mediaSrc used when mediaType is 'image'
+  mediaSrc?: string;
 }
 
 export default function Projects() {
@@ -41,8 +46,9 @@ export default function Projects() {
       description: 'Edge detection using OpenCV and deep learning techniques.',
       tags: ['Canny Edge', 'Sobel Operator', 'Laplacian Operator', 'Scharr Operator', 'OpenCV'],
       thumbnail: edgeImg,
-      videoUrl: 'https://www.youtube.com/embed/6dOQi_NEuec',
-      demoType: 'youtube',
+      // show a static image in the modal instead of a video
+      mediaType: 'image',
+      mediaSrc: figureImg,
     },
     {
       id: 4,
@@ -164,15 +170,19 @@ export default function Projects() {
               <X size={24} />
             </button>
 
-            <div className="aspect-video">
-              <iframe
-                src={selectedProject.videoUrl}
-                title={selectedProject.title}
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
+                  <div className="aspect-video">
+                    {selectedProject.mediaType === 'image' && selectedProject.mediaSrc ? (
+                      <img src={selectedProject.mediaSrc} alt={selectedProject.title} className="w-full h-full object-contain bg-black" />
+                    ) : (
+                      <iframe
+                        src={selectedProject.videoUrl}
+                        title={selectedProject.title}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    )}
+                  </div>
 
             <div className="p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50">
               <h3 className="text-2xl font-bold text-white mb-2">
